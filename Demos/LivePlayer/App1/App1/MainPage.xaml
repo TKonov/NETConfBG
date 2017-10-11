@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+    <ContentPage.Content>
+        <!--<StackLayout BackgroundColor="Red">
+            <Label  Margin="30" Text="We are here"/>
+            <Button  Text="Click to do something sdfsd fsd s"/>
+        </StackLayout>-->
+        <ListView ItemsSource="{Binding}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                            <Image Source="{Binding}"/>
+                                <Label Margin="0, 0, 0, 30" Text="Some description here"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
